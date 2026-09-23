@@ -1,0 +1,123 @@
+/* Fundo padrão */
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  transition: all 0.5s ease;
+}
+
+/* Container principal */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Título centralizado */
+.titulo {
+  text-align: center;
+  margin-top: 40px;
+  color: #1a365d;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/* Área das informações */
+.conteudo {
+  margin-left: 50px;
+  margin-top: 80px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Campo e botão */
+.consulta {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.consulta input {
+  width: 300px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.consulta button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.consulta button:hover {
+  background: #1d4ed8;
+}
+
+/* Card */
+.info {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 15px;
+  width: 400px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.info h2 {
+  color: #1e293b;
+}
+
+/* CLIMAS */
+
+/* Céu limpo */
+.sunny {
+  background: linear-gradient(
+    135deg,
+    #fdfbfb 0%,
+    #ebedee 100%
+  );
+}
+
+/* Nublado */
+.cloudy {
+  background: linear-gradient(
+    135deg,
+    #d7dfe8,
+    #b8c6db
+  );
+}
+
+/* Chuva */
+.rainy {
+  background: linear-gradient(
+    135deg,
+    #4b79a1,
+    #283e51
+  );
+}
+
+/* Tempestade */
+.storm {
+  background: linear-gradient(
+    135deg,
+    #232526,
+    #414345
+  );
+}
+
+/* Neve */
+.snow {
+  background: linear-gradient(
+    135deg,
+    #e6f0ff,
+    #ffffff
+  );
+}
