@@ -73,6 +73,38 @@ function App() {
       // Atualiza a umidade
       setUmidade(dados.main.humidity + "%");
 
+    // CONTEUDO DA AULA DE HOJE
+    // Enviando dados do React para uma API prória
+    // Utilizando o método Post
+
+    //Faz a requisição para a API de histórico criada por você
+    await fetch("http://localhost:3000/historico"), {
+
+    //Define o método htpp utilizado
+      method: "POST",
+
+      //Informa que os dados enviados estarão em formato JSON
+      headers: {
+          "Content-Type": application/json
+      },
+      // Converte o objeto javaScript para JSON
+      body: JSON.stringify({
+
+        // Envia o nome da cidade consultada
+        cidade: cidade,
+        // Envia a temperatura retornada pela API OpenWeathermap
+        temperatura: dados.main.temp + "°C",
+        // Envia a descrição do clima
+        clima: dados.weather[0].description,
+        // Envia a umidade do ar
+        umidade: dados.main.humidity + "%"
+      })
+
+    });
+
+    // fim da primeira aula
+    }
+
     } catch (erro) {
 
       console.log(erro);
