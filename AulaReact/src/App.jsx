@@ -78,14 +78,14 @@ function App() {
     // Utilizando o método Post
 
     //Faz a requisição para a API de histórico criada por você
-    await fetch("http://localhost:3000/historico"), {
+    await fetch("http://localhost:3000/historico", {
 
     //Define o método htpp utilizado
       method: "POST",
 
       //Informa que os dados enviados estarão em formato JSON
       headers: {
-          "Content-Type": application/json
+          "Content-Type": "application/json"
       },
       // Converte o objeto javaScript para JSON
       body: JSON.stringify({
@@ -95,6 +95,9 @@ function App() {
         // Envia a temperatura retornada pela API OpenWeathermap
         temperatura: dados.main.temp + "°C",
         // Envia a descrição do clima
+        // O indice [0] acesso o primeiro elemento do array "weather"
+        // Um array é uma lista de valores armazenados em sequência
+        // e acessados por posição
         clima: dados.weather[0].description,
         // Envia a umidade do ar
         umidade: dados.main.humidity + "%"
@@ -103,7 +106,6 @@ function App() {
     });
 
     // fim da primeira aula
-    }
 
     } catch (erro) {
 
